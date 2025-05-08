@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sledovanie Štúdia</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sledovanie Štúdia</h1>
+
+        <section id="study-input">
+            <h2>Pridať Novú Aktivitu</h2>
+            <form id="activityForm"> <!-- ID FIXED -->
+                <label for="topic">Téma:</label>
+                <input type="text" id="topic" name="topic" required placeholder="Názov témy">
+
+                <label for="study_time">Trvanie (minúty):</label>
+                <input type="number" id="study_time" name="study_time" required min="1" placeholder="Počet minút"> 
+
+                <label for="date">Dátum a čas:</label>
+                <input type="datetime-local" id="date" name="date" required> <!-- MISSING FIELD FIXED -->
+
+                <button type="submit">Pridať Záznam</button>
+            </form>
+        </section>
+
+        <section id="study-history">
+            <h2>História Štúdia</h2>
+            <ul id="activities"> <!-- Change this to match the JavaScript -->
+            </ul>
+            <button id="clear-history">Vymazať Históriu</button>
+        </section>
+        
+
+        <section id="progress">
+            <h2>Prehľad Pokroku</h2>
+            <p id="total-time">Celkový čas štúdia: 0 minút</p>
+        </section>
+    </div>
+    <section id="ai-recommendation">
+        <h2>AI Odporúčanie</h2>
+        <div class="centered">
+            <button id="recommend-btn">Získať odporúčania AI</button>
+        </div>
+        <p id="recommendation-output"></p>
+    </section>
+    
+    
+    <script src="static/script.js"></script>
+</body>
+</html>
